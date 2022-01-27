@@ -1,16 +1,14 @@
 # http_lecture
 
-A new Flutter project.
+This app is only for lecture.　Feel free to clone and taste it.
 
-## Getting Started
+caution) The request URL is available only 50 req/hour.
 
-This project is a starting point for a Flutter application.
+image's copy right...https://unsplash.com/
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+![Simulator Screen Shot - iPhone 11 - 2022-01-28 at 02 44 29](https://user-images.githubusercontent.com/86589100/151415162-2f9ff608-48f3-4ae6-81db-03166829e4a0.png)
+
+

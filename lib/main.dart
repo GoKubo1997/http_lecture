@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'views/header.dart';
+import 'views/image_list.dart';
 
 void main() {
-  runApp(const MaterialApp(home: MyApp()));
+  runApp(const MaterialApp(home: MyApp(), debugShowCheckedModeBanner: false));
 }
 
 class MyApp extends StatelessWidget {
@@ -9,6 +11,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        toolbarHeight: 0,
+        elevation: 0,
+      ),
+      body: Column(
+        children: const [Header(), ImageList()],
+      ),
+    );
   }
 }

@@ -17,13 +17,13 @@ class ImageList extends StatelessWidget {
           StaggeredGridTile.count(
               crossAxisCellCount: 1,
               mainAxisCellCount: 1,
-              child: SingleImage(image: images[i])),
+              child: SingleImage(splashImage: images[i])),
         );
       } else {
         widgets.add(StaggeredGridTile.count(
             crossAxisCellCount: 1,
             mainAxisCellCount: 1.5,
-            child: SingleImage(image: images[i])));
+            child: SingleImage(splashImage: images[i])));
       }
     }
     return widgets;

@@ -6,7 +6,7 @@ import 'views/image_list.dart';
 void main() {
   runApp(const MaterialApp(
       home: ProviderScope(child: MyApp()), debugShowCheckedModeBanner: false));
-} //
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);

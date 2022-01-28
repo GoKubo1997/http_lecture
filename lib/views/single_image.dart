@@ -9,7 +9,7 @@ class SingleImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.black54,
+      color: Colors.black12,
       child: Image.network(
         splashImage.imageUrl,
         fit: BoxFit.cover,

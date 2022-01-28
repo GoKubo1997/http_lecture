@@ -1,12 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:http_lecture/models/unsplash_image.dart';
+import 'package:http_lecture/api/unsplash_images_repository.dart';
+import '../view_models/image_list_view_model.dart';
+// widgets
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:http_lecture/models/unsplash_images.dart';
 import 'single_image.dart';
-import 'package:http_lecture/api/unsplash_images_repository.dart';
 
-class ImageList extends StatelessWidget {
+class ImageList extends ConsumerWidget {
   const ImageList({Key? key}) : super(key: key);
 
   List<Widget> _generateWidgets(List<UnsplashImage> images) {
@@ -30,10 +33,12 @@ class ImageList extends StatelessWidget {
   }
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final imageQuery = ref.watch(imageQueryProvider);
+
     return FutureBuilder<UnsplashImages>(
-        future: UnsplashImagesRepository.getImages(),
-        builder: (context, snapshot) {
+        future: UnsplashImagesRepository.getImages(query: imageQuery),
+        builder: (context, AsyncSnapshot<UnsplashImages> snapshot) {
           if (!snapshot.hasData) {
             return const Padding(
               padding: EdgeInsets.all(50.0),

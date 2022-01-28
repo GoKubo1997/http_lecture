@@ -16,6 +16,12 @@ class _HeaderTab extends State<HeaderTab> with SingleTickerProviderStateMixin {
   }
 
   @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return TabBar(
         controller: _controller,

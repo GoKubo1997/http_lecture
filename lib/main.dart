@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'views/header.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'views/body.dart';
 import 'views/image_list.dart';
 
 void main() {
-  runApp(const MaterialApp(home: MyApp(), debugShowCheckedModeBanner: false));
+  runApp(const MaterialApp(
+      home: ProviderScope(child: MyApp()), debugShowCheckedModeBanner: false));
 }
 
 class MyApp extends StatelessWidget {
@@ -18,7 +20,10 @@ class MyApp extends StatelessWidget {
         elevation: 0,
       ),
       body: Column(
-        children: const [Header(), ImageList()],
+        children: const [
+          Body(),
+          ImageList(),
+        ],
       ),
     );
   }

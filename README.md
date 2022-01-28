@@ -2,7 +2,7 @@
 
 This app is only for lecture. Feel free to clone and taste it.
 
-caution) The request URL is available only 50 req/hour.
+caution) The request URL is available only 50 req/hour. The access token may be expired without notifying.
 
 image's copy right...https://unsplash.com/
 

@@ -32,8 +32,8 @@ class ImageList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<UnsplashImages>(
-        future: UnsplashImagesRepository.getImages(),
-        builder: (context, snapshot) {
+        future: UnsplashImagesRepository.getImages(query: "toyota"),
+        builder: (context, AsyncSnapshot<UnsplashImages> snapshot) {
           if (!snapshot.hasData) {
             return const Padding(
               padding: EdgeInsets.all(50.0),

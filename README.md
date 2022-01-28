@@ -6,6 +6,8 @@ This app is only for lecture. Feel free to clone and taste it.
 
 image's copy right...https://unsplash.com/
 
+official doc: https://unsplash.com/developers
+
 💡 When you deal with secret key for REST API, do NOT use it on client side. Instead, use it on Backend.
 
 

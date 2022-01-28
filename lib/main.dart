@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'views/header.dart';
+import 'views/body.dart';
 import 'views/image_list.dart';
 
 void main() {
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       ),
       body: Column(
         children: const [
-          Header(),
+          Body(),
           ImageList(),
         ],
       ),

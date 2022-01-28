@@ -3,8 +3,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../view_models/image_list_view_model.dart';
 import 'header_tab.dart';
 
-class Header extends ConsumerWidget {
-  const Header({Key? key}) : super(key: key);
+class Body extends ConsumerWidget {
+  const Body({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

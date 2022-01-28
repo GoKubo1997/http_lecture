@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import '../view_models/image_list_view_model.dart';
 import 'header_tab.dart';
 
-class Header extends StatelessWidget {
+class Header extends ConsumerWidget {
   const Header({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20.0),
+      padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -36,8 +38,10 @@ class Header extends StatelessWidget {
                     color: Colors.grey.shade700,
                   ),
                   border: InputBorder.none,
-                  hintText: "Enter something nothing'll happen",
+                  hintText: "Search with keywords",
                   hintStyle: TextStyle(color: Colors.grey.shade500)),
+              onSubmitted: (value) => ref.read(imageQueryProvider.state).state =
+                  value.isEmpty ? "pop" : value,
             ),
           ),
           const SizedBox(height: 20),

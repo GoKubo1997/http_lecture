@@ -34,7 +34,7 @@ class ImageList extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final imageQuery = ref.watch(imageQueryProvider);
+    final String imageQuery = ref.watch(imageQueryProvider);
 
     return FutureBuilder<UnsplashImages>(
         future: UnsplashImagesRepository.getImages(query: imageQuery),

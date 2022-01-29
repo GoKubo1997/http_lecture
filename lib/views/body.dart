@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../view_models/image_list_view_model.dart';
-import 'header_tab.dart';
 
 class Body extends ConsumerWidget {
   const Body({Key? key}) : super(key: key);
@@ -9,11 +8,10 @@ class Body extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
+      padding: const EdgeInsets.all(20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const SizedBox(height: 20),
           Text(
             "It's \nHTTP Friday 🔥",
             style: TextStyle(
@@ -44,8 +42,6 @@ class Body extends ConsumerWidget {
                   value.isEmpty ? "pop" : value,
             ),
           ),
-          const SizedBox(height: 20),
-          const HeaderTab(),
         ],
       ),
     );

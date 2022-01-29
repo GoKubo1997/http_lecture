@@ -38,8 +38,8 @@ class Body extends ConsumerWidget {
                   border: InputBorder.none,
                   hintText: "Search with keywords",
                   hintStyle: TextStyle(color: Colors.grey.shade500)),
-              onSubmitted: (value) => ref.read(imageQueryProvider.state).state =
-                  value.isEmpty ? "pop" : value,
+              onSubmitted: (value) =>
+                  ref.read(imageQueryProvider.state).state = value,
             ),
           ),
         ],
